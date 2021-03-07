@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Crestone Construction | Projects</title>
+<link rel='icon' href='https://drive.google.com/thumbnail?id=1nebSEE2m3nNuJ_smvDLc4SFwUCcwSFFl' type='image/png'/ >
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<style>
+.material-icons-outlined {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+p {
+font-family: 'Nunito', sans-serif;
+}
+#topNav {
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100%;
+background: transparent;
+height: 100px;
+z-index: 2
+}
+#title {
+position: fixed;
+top: 0px;
+left: 0px;
+background: transparent;
+border: none;
+font-family: 'Nunito', sans-serif;
+font-size: 80px;
+cursor: pointer;
+color: white;
+}
+#colors {
+position: fixed;
+top: -5px;
+left: 0px;
+width: 100%;
+height: 100px;
+z-index: -1;
+}
+#share {
+font-family: 'Nunito', sans-serif;
+position: absolute;
+left: 10px;
+top: 90px;
+font-size: 20px;
+color: black;
+}
+#shareFacebook {
+position: absolute;
+top: 140px;
+left: 10px;
+cursor: pointer;
+width: 37px;
+}
+#shareInstagram {
+position: absolute;
+top: 190px;
+left: 10px;
+cursor: pointer;
+width: 37px;
+}
+#alertDiv {
+position: fixed;
+left: 40%;
+width: 20%;
+top: 30%;
+border: 2px solid lightgrey;
+border-radius: 8px;
+visibility: hidden;
+color: grey;
+font-size: 20px;
+text-align: center;
+z-index: 2;
+background: white;
+font-family: 'Nunito', sans-serif;
+}
+#closeAlert {
+border: none;
+background: transparent;
+position: absolute;
+top: 1px;
+right: 1px;
+color: grey;
+cursor: pointer;
+}
+#closeAlert:hover {
+color: black;
+}
+#mainPhoto {
+position: absolute;
+top: 90px;
+left: 0px;
+width: 100%;
+z-index: -1;
+}
+#welcomePage {
+font-family: 'Nunito', sans-serif;
+font-size: 60px;
+cursor: default;
+position: absolute;
+top: 200px;
+left: 20%;
+width: 60%;
+background: transparent;
+border: none;
+color: black;
+}
+.navigation {
+background: transparent;
+border: 1px solid white;
+border-radius: 9px;
+height: 80px;
+width: 15%;
+font-family: 'Nunito', sans-serif;
+font-size: 30px;
+color: white;
+font-weight: bold;
+cursor: pointer;
+float: right;
+}
+#aboutUs {
+position: absolute;
+top: 10px;
+right: 50%;
+}
+#projects {
+position: absolute;
+top: 10px;
+right: 34%;
+}
+#photos {
+position: absolute;
+top: 10px;
+right: 18%;
+}
+#contact {
+position: absolute;
+top: 10px;
+right: 2%;
+}
+.navigation:hover {
+background: white;
+color: black;
+animation-name: example;
+  animation-duration: 0.9s;
+  animation-iteration-count: 1;
+}
+@keyframes example {
+ 
+  0% {background-color: transparent;}
+  100%   {background-color: white}
+
+}
+#footerP {
+font-family: 'Nunito', sans-serif;
+color: white;
+position: absolute;
+top: -15px;
+left: 20px;
+font-size: 30px;
+}
+#footer {
+position: fixed;
+bottom: 0px;
+left: 0px;
+width: 100%;
+height: 60px;
+background: #173638;
+cursor: default;
+}
+.footerButton {
+height: 40px;
+width: 100px;
+border-radius: 20px;
+border: 2px solid white;
+background: transparent;
+color: white;
+cursor: pointer;
+}
+.footerButton:hover {
+background: white;
+color: #173638;
+animation-name: footer;
+  animation-duration: 0.9s;
+  animation-iteration-count: 1;
+}
+@keyframes footer {
+ 
+  0% {background-color: transparent;}
+  100%   {background-color: white}
+
+}
+#projectFooter {
+position: absolute;
+bottom: 10px;
+right: 40px;
+}
+#contactFooter {
+position: absolute;
+bottom: 10px;
+right: 160px;
+}
+</style>
+</head>
+<body onload="setTimeout(showAlert, 15000)">
+<div id="topNav">
+<button id="title" onclick="reload()">Crestone</button>
+<img src="https://lb123658.github.io/CrestoneConstruction/colors.png" id="colors" />
+
+<button class="navigation" id="aboutUs">About us</button>
+<button class="navigation" id="projects">Projects</button>
+<button class="navigation" id="photos">Photos</button>
+<button class="navigation" id="contact">Contact</button>
+
+</div>
+<p id="share">Follow us on social media</p>
+
+<a href="https://www.facebook.com/pages/category/Company/Crestone-Construction-229190607105154/" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" id="shareFacebook" /></a>
+
+<a href="https://www.instagram.com/" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png" id="shareInstagram" /></a>
+
+<div id="alertDiv">
+<p id="alertText"><br>Looking to renovate or add an addition to your home? Get started today.<br><br><br><br> <a href="mailto:crestone1@sbcglobal.net" id="mailto">Contact us</a></p>
+<button id="closeAlert" onclick="closeAlert()" onmouseover="popup()" onmouseout="popdown()" title="Close"><span class="material-icons-outlined">
+close
+</span></button>
+</div>
+
+<img src="kitchen1.jpg" id="mainPhoto" />
+
+<button id="welcomePage"><b>Crestone Construction<br>  <span style="font-size: 30px;">Shorewood, WI<br>Since 1997</span></b></button>
+
+<div id="footer">
+<p id="footerP">Get started today!</p>
+<button class="footerButton" id="contactFooter">Contact us</button>
+<button class="footerButton" id="projectFooter">Our portfolio</button>
+</div>
+<script>
+function reload() {
+location.reload();
+}
+function showAlert() { 
+document.getElementById("alertDiv").style.visibility = "visible";
+}
+function closeAlert() { 
+document.getElementById("alertDiv").style.visibility = "hidden";
+}
+
+</script>
+</body>
+</html>
