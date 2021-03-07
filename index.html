@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +8,7 @@
   
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 <style>
@@ -35,7 +37,7 @@
   font-feature-settings: 'liga';
 }
 p {
-font-family: 'Staatliches', cursive;
+font-family: 'Nunito', sans-serif;
 }
 #topNav {
 position: fixed;
@@ -52,7 +54,7 @@ top: 0px;
 left: 0px;
 background: transparent;
 border: none;
-font-family: 'Staatliches', cursive;
+font-family: 'Nunito', sans-serif;
 font-size: 80px;
 cursor: pointer;
 color: white;
@@ -66,6 +68,7 @@ height: 100px;
 z-index: -1;
 }
 #share {
+font-family: 'Nunito', sans-serif;
 position: absolute;
 left: 10px;
 top: 90px;
@@ -99,6 +102,7 @@ font-size: 20px;
 text-align: center;
 z-index: 2;
 background: white;
+font-family: 'Nunito', sans-serif;
 }
 #closeAlert {
 border: none;
@@ -120,8 +124,8 @@ width: 100%;
 z-index: -1;
 }
 #welcomePage {
-font-family: 'Staatliches', cursive;
-font-size: 50px;
+font-family: 'Nunito', sans-serif;
+font-size: 60px;
 cursor: default;
 position: absolute;
 top: 200px;
@@ -135,8 +139,7 @@ color: black;
 </head>
 <body onload="setTimeout(showAlert, 15000)">
 <div id="topNav">
-<button id="title" onclick="reload()">Crest<span id="o" style="font-size: 60px;
-text-decoration: underline; position: fixed; top: 6px;">o</span><span style="position: fixed; left: 210px;">ne</span></button>
+<button id="title" onclick="reload()">Crestone</button>
 <img src="https://lb123658.github.io/CrestoneConstruction/colors.png" id="colors" />
 </div>
 <p id="share">Follow us on social media</p>
@@ -156,7 +159,7 @@ close
 
 <img src="kitchen1.jpg" id="mainPhoto" />
 
-<button id="welcomePage">Crestone Construction • Shorewood, WI<br>Since 1997</button>
+<button id="welcomePage"><b>Crestone Construction</b><br>  <span style="font-size: 30px;">Shorewood, WI<br>Since 1997</span></button>
 <script>
 function reload() {
 location.reload();
