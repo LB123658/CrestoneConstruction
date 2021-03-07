@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -135,12 +133,64 @@ background: transparent;
 border: none;
 color: black;
 }
+.navigation {
+background: transparent;
+border: 1px solid white;
+border-radius: 9px;
+height: 80px;
+width: 15%;
+font-family: 'Nunito', sans-serif;
+font-size: 30px;
+color: white;
+font-weight: bold;
+cursor: pointer;
+float: right;
+}
+#aboutUs {
+position: absolute;
+top: 10px;
+right: 50%;
+}
+#projects {
+position: absolute;
+top: 10px;
+right: 34%;
+}
+#photos {
+position: absolute;
+top: 10px;
+right: 18%;
+}
+#contact {
+position: absolute;
+top: 10px;
+right: 2%;
+}
+.navigation:hover {
+background: white;
+color: black;
+animation-name: example;
+  animation-duration: 0.9s;
+  animation-iteration-count: 1;
+}
+@keyframes example {
+ 
+  0% {background-color: transparent;}
+  100%   {background-color: white}
+
+}
 </style>
 </head>
 <body onload="setTimeout(showAlert, 15000)">
 <div id="topNav">
 <button id="title" onclick="reload()">Crestone</button>
 <img src="https://lb123658.github.io/CrestoneConstruction/colors.png" id="colors" />
+
+<button class="navigation" id="aboutUs">About us</button>
+<button class="navigation" id="projects">Projects</button>
+<button class="navigation" id="photos">Photos</button>
+<button class="navigation" id="contact">Contact</button>
+
 </div>
 <p id="share">Follow us on social media</p>
 
@@ -159,7 +209,7 @@ close
 
 <img src="kitchen1.jpg" id="mainPhoto" />
 
-<button id="welcomePage"><b>Crestone Construction<br>  <span style="font-size: 30px;">Shorewood, WI<br>Since 1997</b></span></button>
+<button id="welcomePage"><b>Crestone Construction<br>  <span style="font-size: 30px;">Shorewood, WI<br>Since 1997</span></b></button>
 <script>
 function reload() {
 location.reload();
