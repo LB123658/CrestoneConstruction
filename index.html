@@ -7,7 +7,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 <style>
+.material-icons-outlined {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
 p {
 font-family: 'Staatliches', cursive;
 }
@@ -38,19 +64,87 @@ width: 100%;
 height: 100px;
 z-index: -1;
 }
+#share {
+position: absolute;
+left: 10px;
+top: 90px;
+font-size: 20px;
+color: grey;
+}
+#shareFacebook {
+position: absolute;
+top: 140px;
+left: 10px;
+cursor: pointer;
+width: 37px;
+}
+#shareInstagram {
+position: absolute;
+top: 190px;
+left: 10px;
+cursor: pointer;
+width: 37px;
+}
+#alertDiv {
+position: fixed;
+left: 40%;
+width: 20%;
+top: 30%;
+border: 2px solid lightgrey;
+border-radius: 8px;
+visibility: visible;
+color: grey;
+font-size: 20px;
+text-align: center;
+z-index: 2;
+}
+#closeAlert {
+border: none;
+background: transparent;
+position: absolute;
+top: 1px;
+right: 1px;
+color: grey;
+cursor: pointer;
+}
+#closeAlert:hover {
+color: black;
+}
+
 </style>
 </head>
-<body>
+<body onload="setTimeout(showAlert, 15000)">
 <div id="topNav">
 <button id="title" onclick="reload()">Crest<span id="o" style="font-size: 60px;
 text-decoration: underline; position: fixed; top: 6px;">o</span><span style="position: fixed; left: 210px;">ne</span></button>
-<img src="colors.png" id="colors" />
+<img src="https://lb123658.github.io/CrestoneConstruction/colors.png" id="colors" />
+</div>
+<p id="share">Follow us on social media</p>
+
+<a href="https://www.facebook.com/pages/category/Company/Crestone-Construction-229190607105154/" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" id="shareFacebook" /></a>
+
+<a href="https://www.instagram.com/" target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png" id="shareInstagram" /></a>
+
+<div id="alertDiv">
+<p id="alertText"><br>Looking to renovate or add an addition to your home? Get started today.<br><br><br><br> <a href="mailto:crestone1@sbcglobal.net" id="mailto">Contact us</a></p>
+<button id="closeAlert" onclick="closeAlert()" onmouseover="popup()" onmouseout="popdown()"><span class="material-icons-outlined">
+close
+</span></button>
 </div>
 
 <script>
 function reload() {
 location.reload();
 }
+function showAlert() { 
+document.getElementById("alertDiv").style.visibility = "visible";
+}
+function closeAlert() { 
+document.getElementById("alertDiv").style.visibility = "hidden";
+}
+
 </script>
 </body>
 </html>
